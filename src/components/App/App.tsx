@@ -6,7 +6,7 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import MovieModal from "../MovieModal/MovieModal";
 import { fetchMovies } from "../../services/movieService";
 import type { Movie } from "../../types/movie";
-// import styles from "../App/App.css";
+import styles from "./App.module.css";
 import toast from "react-hot-toast";
 
 export default function App() {
@@ -36,7 +36,7 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className={styles.app}>
       <SearchBar onSubmit={handleSearch} />
 
       {loading && <Loader />}
