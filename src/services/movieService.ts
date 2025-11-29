@@ -17,6 +17,7 @@ export async function fetchMovies(query: string): Promise<Movie[]> {
       params: { query },
       headers: {
         Authorization: `Bearer ${token}`,
+        accept: "application/json",
       },
     }
   );
